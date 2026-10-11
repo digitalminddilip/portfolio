@@ -30,3 +30,12 @@ document.querySelectorAll(".project-card, .skill-card").forEach(card => {
   });
   card.addEventListener("pointerleave", () => card.style.transform = "");
 });
+
+const emailBtn = document.getElementById("email-btn");
+if (emailBtn) {
+  const isMobile = /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth <= 768;
+  if (isMobile) {
+    emailBtn.removeAttribute("target");
+    emailBtn.href = "mailto:digitalminddilip0906@gmail.com";
+  }
+}
