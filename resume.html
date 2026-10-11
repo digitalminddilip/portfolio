@@ -3,29 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dilip Kumar Sharma — Resume</title>
+  <title>Dilip Kumar Sharma — Professional Resume</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary: #1e3a8a;
+      --primary: #0f172a;
       --accent: #2563eb;
-      --text: #1f2937;
-      --muted: #4b5563;
-      --border: #e5e7eb;
+      --text: #1e293b;
+      --muted: #475569;
+      --border: #e2e8f0;
       --bg: #ffffff;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: 'Inter', -apple-system, sans-serif;
       color: var(--text);
-      background: #f3f4f6;
+      background: #f1f5f9;
       line-height: 1.5;
       padding: 30px 15px;
     }
     .resume-actions {
-      max-width: 850px;
+      max-width: 860px;
       margin: 0 auto 20px;
       display: flex;
       justify-content: space-between;
@@ -45,10 +45,10 @@
     }
     .back-btn {
       background: #ffffff;
-      color: #374151;
-      border: 1px solid #d1d5db;
+      color: #334155;
+      border: 1px solid #cbd5e1;
     }
-    .back-btn:hover { background: #f9fafb; }
+    .back-btn:hover { background: #f8fafc; }
     .print-btn {
       background: var(--accent);
       color: #ffffff;
@@ -57,7 +57,7 @@
     }
     .print-btn:hover { background: #1d4ed8; }
     .page {
-      max-width: 850px;
+      max-width: 860px;
       margin: 0 auto;
       background: var(--bg);
       padding: 45px 50px;
@@ -66,25 +66,25 @@
     }
     header {
       border-bottom: 2px solid var(--border);
-      padding-bottom: 20px;
-      margin-bottom: 22px;
+      padding-bottom: 18px;
+      margin-bottom: 20px;
     }
     h1 {
       font-family: 'Space Grotesk', sans-serif;
       font-size: 2.2rem;
-      color: #111827;
+      color: #0f172a;
       letter-spacing: -0.5px;
     }
     .subtitle {
       font-size: 1.15rem;
       font-weight: 600;
       color: var(--accent);
-      margin-top: 4px;
+      margin-top: 3px;
     }
     .contact-info {
       display: flex;
       flex-wrap: wrap;
-      gap: 16px;
+      gap: 14px 20px;
       font-size: 0.88rem;
       color: var(--muted);
       margin-top: 12px;
@@ -95,56 +95,72 @@
       font-weight: 500;
     }
     .contact-info a:hover { color: var(--accent); }
-    section { margin-bottom: 22px; }
+    section { margin-bottom: 20px; }
     h2 {
       font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.05rem;
+      font-size: 1rem;
       text-transform: uppercase;
       letter-spacing: 1px;
       color: var(--primary);
-      border-bottom: 1.5px solid #dbeafe;
+      border-bottom: 1.5px solid #e2e8f0;
       padding-bottom: 5px;
-      margin-bottom: 12px;
+      margin-bottom: 11px;
     }
-    p { font-size: 0.92rem; color: #374151; margin-bottom: 8px; }
+    p { font-size: 0.9rem; color: #334155; margin-bottom: 7px; }
     .skill-group {
-      margin-bottom: 8px;
-      font-size: 0.92rem;
+      margin-bottom: 6px;
+      font-size: 0.9rem;
     }
-    .skill-group strong { color: #111827; font-weight: 600; }
-    .project-item { margin-bottom: 16px; }
+    .skill-group strong { color: #0f172a; font-weight: 600; }
+    .project-item, .edu-item { margin-bottom: 14px; }
     .item-header {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      margin-bottom: 3px;
+      margin-bottom: 2px;
     }
     .item-title {
-      font-size: 1rem;
+      font-size: 0.96rem;
       font-weight: 700;
-      color: #111827;
+      color: #0f172a;
     }
     .item-meta {
-      font-size: 0.85rem;
+      font-size: 0.84rem;
       font-style: italic;
-      color: #6b7280;
+      color: #64748b;
     }
     ul {
       list-style-type: disc;
       padding-left: 20px;
-      margin-top: 6px;
+      margin-top: 5px;
     }
     li {
-      font-size: 0.88rem;
-      color: #374151;
+      font-size: 0.87rem;
+      color: #334155;
       margin-bottom: 4px;
       line-height: 1.45;
+    }
+    .edu-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 8px;
+      font-size: 0.88rem;
+    }
+    .edu-table th, .edu-table td {
+      border: 1px solid #e2e8f0;
+      padding: 8px 12px;
+      text-align: left;
+    }
+    .edu-table th {
+      background: #f8fafc;
+      font-weight: 600;
+      color: #0f172a;
     }
     @media print {
       body { background: #fff; padding: 0; }
       .resume-actions { display: none !important; }
       .page { box-shadow: none; border-radius: 0; padding: 25px 30px; }
-      h1 { font-size: 1.9rem; }
+      h1 { font-size: 1.85rem; }
     }
   </style>
 </head>
@@ -158,35 +174,39 @@
   <main class="page">
     <header>
       <h1>Dilip Kumar Sharma</h1>
-      <div class="subtitle">AI Engineer &amp; Software Developer</div>
+      <div class="subtitle">AI Systems &amp; Software Development</div>
       <div class="contact-info">
-        <span>📍 India</span>
-        <span>✉️ <a href="mailto:digitalminddilip0906@gmail.com">digitalminddilip0906@gmail.com</a></span>
+        <span>📞 <a href="tel:+919555733957">+91-9555733957</a></span>
+        <span>✉️ <a href="mailto:dilipsharma0906@gmail.com">dilipsharma0906@gmail.com</a></span>
         <span>🌐 <a href="https://digitalminddilip.github.io/portfolio" target="_blank">Portfolio</a></span>
         <span>💻 <a href="https://github.com/digitalminddilip" target="_blank">github.com/digitalminddilip</a></span>
+        <span>📍 Uttar Pradesh, India</span>
       </div>
     </header>
 
     <section>
       <h2>Professional Summary</h2>
       <p>
-        Goal-oriented and practical <strong>AI Engineer &amp; BCA student</strong> with foundations in Python, REST APIs, workflow automation, and intelligent system integration. Proven track record of developing end-to-end solutions including <strong>CleanConnect</strong> (AI waste classification &amp; civic network) and <strong>Smart Campus Energy</strong> (IoT &amp; sustainability analytics). Passionate about turning complex problems into scalable, user-centric software.
+        Motivated and detail-oriented <strong>AI Engineer &amp; BCA Student</strong> with strong technical grounding in Python, REST APIs, workflow automation, and full-stack software development. Proven hands-on ability to build functional prototypes like <strong>CleanConnect</strong> (AI waste classification &amp; civic network) and <strong>Smart Campus Energy</strong> (IoT &amp; sustainability analytics). Fast learner with solid computer application fundamentals (ADCA certified) eager to contribute to innovative software and AI engineering teams.
       </p>
     </section>
 
     <section>
-      <h2>Technical Skills</h2>
+      <h2>Technical Skills &amp; Certifications</h2>
       <div class="skill-group">
-        <strong>Languages:</strong> Python, JavaScript (ES6+), C/C++, HTML5, CSS3
+        <strong>Programming Languages:</strong> Python, C/C++, JavaScript (ES6+), HTML5, CSS3
       </div>
       <div class="skill-group">
-        <strong>Frameworks &amp; Backend:</strong> FastAPI, RESTful APIs, Service Architecture, Node.js basics
+        <strong>Backend &amp; Frameworks:</strong> RESTful APIs, FastAPI, Service Architecture, Node.js basics
       </div>
       <div class="skill-group">
-        <strong>AI &amp; Automation:</strong> AI API Integrations, Intelligent Workflows, Computer Vision basics, Data Scripting
+        <strong>AI &amp; Automation:</strong> AI API Integrations, Computer Vision fundamentals, Automated Task Scripting
       </div>
       <div class="skill-group">
-        <strong>Database &amp; Tools:</strong> Firebase (Auth, Cloud Services), Git, GitHub, Postman, Responsive Web Design
+        <strong>Databases &amp; Tools:</strong> Firebase (Auth, Firestore), Git, GitHub, Postman, VS Code
+      </div>
+      <div class="skill-group">
+        <strong>Computer Certifications:</strong> ADCA (Advanced Diploma in Computer Applications, MDCIT - 2024), Basic Computer (NIIT Foundation - 2023)
       </div>
     </section>
 
@@ -199,42 +219,76 @@
           <span class="item-meta">Python, AI Classification, REST APIs, Firebase</span>
         </div>
         <ul>
-          <li>Architected an intelligent civic coordination platform connecting citizen incident reports, automated AI waste classification, and municipal collector workflows.</li>
-          <li>Engineered automated classification pipeline to prioritize urgent environmental issues and optimize waste pickup routes.</li>
-          <li>Designed a responsive administrative dashboard for live progress tracking, analytics, and verified task resolution.</li>
+          <li>Architected an intelligent civic coordination system connecting citizen waste incident reporting, automated AI classification, and sanitation collector workflows.</li>
+          <li>Engineered automated report processing pipeline allowing users to submit environmental issues with real-time classification and priority dispatching.</li>
+          <li>Built interactive management dashboard for administrative monitoring and verification of resolved community reports.</li>
         </ul>
       </div>
 
       <div class="project-item">
         <div class="item-header">
-          <span class="item-title">Smart Campus Energy — IoT &amp; Sustainability System</span>
+          <span class="item-title">Smart Campus Energy — IoT &amp; Sustainability Management System</span>
           <span class="item-meta">IoT Architecture, Python, FastAPI, Analytics</span>
         </div>
         <ul>
-          <li>Designed a real-time energy telemetry architecture to monitor power consumption metrics across campus facilities.</li>
-          <li>Built intelligent rule-based recommendation logic for predictive anomaly detection and peak-demand energy reduction.</li>
-          <li>Developed interactive analytics interface for visualizing power consumption trends, historical comparisons, and saving metrics.</li>
+          <li>Designed a smart monitoring prototype that tracks campus power consumption in real-time using simulated IoT telemetries.</li>
+          <li>Integrated an intelligent recommendation engine providing automated alerts and actionable conservation strategies for peak load reduction.</li>
+          <li>Created an intuitive data visualization dashboard displaying consumption metrics, trend forecasts, and anomaly detection logs.</li>
         </ul>
       </div>
     </section>
 
     <section>
-      <h2>Education</h2>
-      <div class="item-header">
-        <span class="item-title">Bachelor of Computer Applications (BCA)</span>
-        <span class="item-meta">2024 – 2027</span>
-      </div>
-      <p style="margin-top: 4px; font-size: 0.88rem; color: #4b5563;">
-        <strong>Relevant Studies:</strong> Object-Oriented Programming (C++/Python), Data Structures &amp; Algorithms, Database Management, Web Technologies, Computer Networks.
-      </p>
+      <h2>Education &amp; Qualifications</h2>
+      <table class="edu-table">
+        <thead>
+          <tr>
+            <th>Qualification / Degree</th>
+            <th>Institution / Board</th>
+            <th>Year</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Bachelor of Computer Applications (BCA)</strong></td>
+            <td>Undergraduate Degree</td>
+            <td>2024 – 2027 (Pursuing)</td>
+          </tr>
+          <tr>
+            <td><strong>ITI</strong></td>
+            <td>Bapu ITI, Pipiganj</td>
+            <td>Pursuing</td>
+          </tr>
+          <tr>
+            <td><strong>ADCA (Advance Diploma in Computer Applications)</strong></td>
+            <td>MDCIT Computer Center</td>
+            <td>2024</td>
+          </tr>
+          <tr>
+            <td><strong>Basic Computer Training</strong></td>
+            <td>NIIT Foundation</td>
+            <td>2023</td>
+          </tr>
+          <tr>
+            <td><strong>Intermediate (12th)</strong></td>
+            <td>U.P. Board</td>
+            <td>2023</td>
+          </tr>
+          <tr>
+            <td><strong>High School (10th)</strong></td>
+            <td>U.P. Board</td>
+            <td>2020</td>
+          </tr>
+        </tbody>
+      </table>
     </section>
 
     <section>
-      <h2>Key Strengths &amp; Competencies</h2>
+      <h2>Strengths &amp; Additional Information</h2>
       <ul>
-        <li><strong>Builder Mindset:</strong> Fast learner focused on translating technical concepts directly into working, deployable software.</li>
-        <li><strong>Modern DevOps:</strong> Experienced with Git version control, automated CI/CD static deployments via GitHub Actions.</li>
-        <li><strong>Problem Solving:</strong> Strong logical foundation built through rigorous algorithmic problem solving and practical project execution.</li>
+        <li><strong>Languages:</strong> English, Hindi (Fluent)</li>
+        <li><strong>Key Strengths:</strong> Quick learner, strong analytical problem solving, adaptable under dynamic environments, hard working with builder mindset.</li>
+        <li><strong>Interests:</strong> Artificial Intelligence, Automation Engineering, Open-Source Collaboration, Hackathons.</li>
       </ul>
     </section>
   </main>
