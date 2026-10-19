@@ -34,9 +34,12 @@ Experience the live interactive portfolio hosted on GitHub Pages:
 
 - **⚡ Sleek Cyberpunk & AI Theme:** Modern dark glassmorphism design with responsive grid background, ambient glow, and neon hover states.
 - **📱 Fully Responsive:** Adaptive layout crafted for desktop, tablets, and smartphones.
-- **🧠 Featured Projects:**
-  - **CleanConnect:** AI-driven civic reporting, automated waste classification, and municipal dispatch system.
-  - **Smart Campus Energy:** IoT energy telemetry architecture with rule-based recommendations for campus sustainability.
+- **🧠 Featured Flagship Projects:**
+  - **CleanConnect AI (EcoTrack):** Next-Gen AI-Powered Civic Cleanliness & Municipal Waste Intelligence Platform compliant with IEEE Std 830-1998. Features Google Gemini Vision multimodal triage, OpenCV/SSIM 75%+ before-and-after proof verification gate, asynchronous FastAPI microservices, Smart Hybrid OTP via Resend API (Port 443), and zero-cost ($0) cloud deployment across Vercel & Render.
+    - 🌐 **Live Web Application:** [https://ecotrackaipwd-frontend.vercel.app/](https://ecotrackaipwd-frontend.vercel.app/)
+    - 🐙 **Project Repository:** [digitalminddilip/ecotrackaipwd](https://github.com/digitalminddilip/ecotrackaipwd)
+    - ⚡ **Interactive API Docs:** [ecotrackaipwd-1.onrender.com/docs](https://ecotrackaipwd-1.onrender.com/docs)
+  - **Smart Campus Energy:** IoT energy telemetry architecture with rule-based recommendations for campus sustainability and peak load reduction.
 - **📄 Interactive ATS Resume:** Embedded [resume.html](resume.html) page with a built-in 1-click **"Print / Save as PDF"** feature.
 - **✉️ Smart Contact Action:** Intelligently switches between direct Gmail compose on desktop and native mobile mail app on smartphones.
 
