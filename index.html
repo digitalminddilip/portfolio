@@ -3,210 +3,1060 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Dilip Kumar Sharma — AI Engineer, Automation Builder and BCA Student portfolio.">
-  <title>Dilip Kumar Sharma | AI Engineer Portfolio</title>
+  <title>Dilip Kumar Sharma | AI Systems Architect & CivicTech Pioneer</title>
+  <meta name="description" content="Official Executive Portfolio of Dilip Kumar Sharma — AI Systems Architect, CivicTech Pioneer, and Lead Developer of CleanConnect AI (EcoTrack). Building multimodal vision pipelines, FastAPI microservices, and zero-cost cloud architectures.">
+  <meta name="keywords" content="Dilip Kumar Sharma, AI Engineer, CleanConnect AI, EcoTrack, FastAPI, Gemini Vision, OpenCV SSIM, ITM GIDA Gorakhpur, Full Stack Developer">
+  <meta name="author" content="Dilip Kumar Sharma">
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Dilip Kumar Sharma | AI Systems Architect">
+  <meta property="og:description" content="Official Portfolio of Dilip Kumar Sharma. AI Systems Architect, CivicTech Pioneer, and Creator of CleanConnect AI.">
+  <meta property="og:image" content="./profile.jpg">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="./profile.jpg">
+
+  <!-- Typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="cursor-glow"></div>
-  <div class="grid-bg"></div>
 
-  <header class="header">
-    <a class="logo" href="#home"><span>&lt;</span>digitalminddilip<span>/&gt;</span></a>
-    <button class="menu-btn" aria-label="Toggle menu">☰</button>
-    <nav class="nav">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#journey">Journey</a>
-      <a href="#contact">Contact</a>
-      <a href="resume.html">Resume 📄</a>
-    </nav>
+  <!-- Fullscreen Subtle Flame Ember Spark Cursor Canvas ("Halka Fire Trail") -->
+  <canvas id="fireTrailCanvas"></canvas>
+
+  <!-- Fullscreen Ambient Coding Bits Matrix Rain Canvas (0, 1 Streams across black background) -->
+  <canvas id="globalCodeMatrixCanvas" class="global-code-matrix-canvas"></canvas>
+
+  <!-- Navigation Bar -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="nav-brand">
+        <span class="brand-name">&lt;Dilip Kumar Sharma/&gt;</span>
+        <span class="brand-title-tag">AI</span>
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="#about" class="nav-link">Vision</a>
+        <a href="#projects" class="nav-link">Ventures &amp; Tech</a>
+        <a href="#skills" class="nav-link">Stack</a>
+        <a href="#journey" class="nav-link">Trajectory</a>
+        <a href="#credentials" class="nav-link">Credentials</a>
+        <a href="#contact" class="nav-link">Connect</a>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- AI Voice Briefing Quick Trigger (Circular Pill / Mic Button) -->
+        <button class="ai-voice-circle-btn" id="voiceTriggerBtn" title="Listen to Dilip's AI Voice Statement" aria-label="AI Voice Briefing">
+          <div class="voice-icon-wrap">
+            <svg class="icon-sm mic-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg>
+          </div>
+          <span class="voice-pulse-ring"></span>
+        </button>
+
+        <a href="resume.html" class="btn btn-sm btn-outline nav-cv-btn" title="View Official ATS Resume">
+          <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          <span class="cv-text-desktop">Resume 📄</span>
+          <span class="cv-text-mobile">Resume</span>
+        </a>
+
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
   </header>
 
-  <main>
-    <section id="home" class="hero section">
-      <div class="hero-copy reveal">
-        <img src="profile.jpg" alt="Dilip Kumar Sharma" class="profile-img">
-        <h1>Hi, I'm <span>Dilip</span>.<br><strong>I build with AI.</strong></h1>
-        <p class="hero-text">BCA student focused on becoming an AI Engineer — building practical software, automating boring workflows, and solving real-world problems.</p>
-        <div class="hero-actions">
-          <a href="#projects" class="btn primary">Explore My Work <span>↗</span></a>
-          <a href="resume.html" class="btn secondary">View Resume <span>📄</span></a>
-          <a href="#contact" class="btn secondary">Let's Connect</a>
+  <!-- Hero Section -->
+  <section class="hero-section" id="hero">
+    <div class="container hero-container">
+      
+      <div class="hero-content">
+        
+        <div class="kisan-pill">
+          <span class="wheat-icon">🌿</span>
+          <span class="pill-title">Lead Architect</span>
+          <span class="pill-sep">·</span>
+          <span class="pill-sub">CleanConnect AI (EcoTrack)</span>
         </div>
-        <div class="quick-stats">
-          <div><strong>AI</strong><small>Engineering</small></div>
-          <div><strong>API</strong><small>Automation</small></div>
-          <div><strong>Web</strong><small>Development</small></div>
+
+        <h1 class="hero-title">
+          Dilip <span class="gradient-kisan">Kumar Sharma</span>
+        </h1>
+
+        <div class="typewriter-container">
+          <span class="typewriter-prefix">&gt; </span>
+          <span class="typewriter-text" id="typewriter"></span>
+          <span class="typewriter-cursor">_</span>
         </div>
-      </div>
 
-      <div class="hero-visual reveal">
-        <div class="orb"></div>
-        <div class="code-card">
-          <div class="window-bar"><i></i><i></i><i></i><span>ai_engineer.py</span></div>
-          <pre><code><span class="purple">class</span> <span class="blue">AIEngineer</span>:
-    <span class="purple">def</span> <span class="green">build</span>(<span class="orange">self</span>):
-        skills = [
-            <span class="string">"Python"</span>,
-            <span class="string">"APIs"</span>,
-            <span class="string">"Automation"</span>,
-            <span class="string">"AI"</span>
-        ]
+        <p class="hero-bio">
+          AI Systems Developer, CivicTech Engineer, and Full-Stack Architect. Pursuing BCA at <strong>ITM GIDA Gorakhpur</strong>. Engineering next-generation municipal waste intelligence with <strong>Google Gemini Vision</strong>, <strong>OpenCV SSIM 75%+ verification</strong>, and zero-cost cloud microservices powered by <strong>Python FastAPI and Vercel</strong>.
+        </p>
 
-        <span class="purple">return</span> <span class="string">"Build. Automate. Scale."</span></code></pre>
-        </div>
-        <div class="floating-chip chip-one">⚡ Automation</div>
-        <div class="floating-chip chip-two">🤖 AI Systems</div>
-      </div>
-    </section>
-
-    <section id="about" class="section">
-      <div class="section-heading reveal">
-        <p class="eyebrow">01 / ABOUT</p>
-        <h2>Builder mindset.<br><span>Real-world focus.</span></h2>
-      </div>
-      <div class="about-grid">
-        <div class="about-text reveal">
-          <p>I'm <strong>Dilip Kumar Sharma</strong>, a BCA student and aspiring AI Engineer. I enjoy turning ideas into working software instead of only learning theory.</p>
-          <p>My current focus is Python, APIs, backend development, AI concepts, automation, and data handling. I learn best by building projects and experimenting with real problems.</p>
-          <p>Long term, I want to build AI systems and automation solutions that create measurable value for businesses and users.</p>
-        </div>
-        <div class="about-card reveal">
-          <span class="card-icon">◈</span>
-          <h3>What I'm working toward</h3>
-          <ul>
-            <li><span>01</span> AI Engineering</li>
-            <li><span>02</span> Workflow Automation</li>
-            <li><span>03</span> AI-powered Products</li>
-            <li><span>04</span> Freelancing & AI Agency</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="skills" class="section">
-      <div class="section-heading reveal">
-        <p class="eyebrow">02 / SKILLS</p>
-        <h2>Tools I use to <span>build.</span></h2>
-      </div>
-      <div class="skills-grid">
-        <article class="skill-card reveal"><div class="skill-icon">🐍</div><h3>Python</h3><p>Core programming, automation scripting, data processing, and microservice backends.</p><div class="meter"><span style="width:80%"></span></div></article>
-        <article class="skill-card reveal"><div class="skill-icon">⚙</div><h3>FastAPI & Backend</h3><p>Asynchronous REST APIs, Uvicorn, SQLite WAL, JWT (HS256) RBAC, and Bcrypt security.</p><div class="meter"><span style="width:78%"></span></div></article>
-        <article class="skill-card reveal"><div class="skill-icon">🤖</div><h3>AI & Computer Vision</h3><p>Google Gemini Vision, OpenCV, SSIM 75%+ proof verification, and perceptual hashing.</p><div class="meter"><span style="width:75%"></span></div></article>
-        <article class="skill-card reveal"><div class="skill-icon">🌐</div><h3>Web Development</h3><p>Vanilla HTML5, CSS3 glassmorphism, responsive UI/UX, and ES6+ JavaScript.</p><div class="meter"><span style="width:82%"></span></div></article>
-        <article class="skill-card reveal"><div class="skill-icon">☁️</div><h3>Cloud & DevOps</h3><p>Vercel Edge CDN, Render Cloud Web Services, Resend API, and Linux (x86_64 / s390x).</p><div class="meter"><span style="width:72%"></span></div></article>
-        <article class="skill-card reveal"><div class="skill-icon">🔧</div><h3>Git & GitHub</h3><p>Version control, automated GitHub Actions CI/CD workflows, and open-source collaboration.</p><div class="meter"><span style="width:76%"></span></div></article>
-      </div>
-    </section>
-
-    <section id="projects" class="section projects-section">
-      <div class="section-heading reveal">
-        <p class="eyebrow">03 / PROJECTS</p>
-        <h2>Things I've <span>built.</span></h2>
-      </div>
-      <div class="projects-grid">
-        <article class="project-card reveal">
-          <div class="project-top">
-            <span class="project-number">01</span>
-            <span class="project-tag">AI + MUNICIPAL INTELLIGENCE</span>
+        <!-- Executive Voice Player Card (Verified AI Voice Engine) -->
+        <div class="voice-card-interactive" id="voiceCard">
+          <div class="voice-card-header-row">
+            <div class="voice-card-left">
+              <div class="ai-avatar-pulse">
+                <span class="ai-dot"></span>
+                <span class="ai-sound-waves" id="voiceWaveIndicator">
+                  <i></i><i></i><i></i><i></i>
+                </span>
+              </div>
+              <div class="voice-text-group">
+                <div class="voice-card-meta-row">
+                  <span class="voice-card-label">EXECUTIVE AUDIO BRIEFING · AI VOICE</span>
+                  <span class="voice-gender-pill" id="voiceGenderBadge">
+                    <span class="badge-dot"></span>
+                    <span id="voiceBadgeText">Executive Male Voice</span>
+                  </span>
+                </div>
+                <p class="voice-card-desc" id="voiceStatusText">Tap play to listen to Dilip's official statement</p>
+              </div>
+            </div>
+            <button class="voice-play-control" id="voicePlayBtn" aria-label="Play Dilip's Speech" title="Play / Pause Executive Voice">
+              <svg id="playIcon" class="icon" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+              <svg id="pauseIcon" class="icon hidden" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg>
+            </button>
           </div>
-          <a href="https://ecotrackaipwd-frontend.vercel.app/" target="_blank" rel="noopener" class="project-visual eco" style="background: #ffffff; display: flex; align-items: center; justify-content: center; padding: 16px; text-decoration: none; cursor: pointer;" title="Open CleanConnect AI Live Demo">
-            <img src="cleanconnect.jpg" alt="CleanConnect AI Logo" style="max-width: 100%; max-height: 100%; width: auto; height: 100%; object-fit: contain; display: block; margin: auto;">
+
+          <!-- Quick Male Dialect Selector -->
+          <div class="voice-dialects-row">
+            <span class="dialect-label">Male Accent:</span>
+            <div class="dialect-buttons" id="voiceDialectBtns">
+              <button type="button" class="dialect-pill active" data-accent="indian" title="Indian English Male Voice">🇮🇳 Indian English</button>
+              <button type="button" class="dialect-pill" data-accent="uk" title="UK Executive Voice">🇬🇧 UK Natural</button>
+              <button type="button" class="dialect-pill" data-accent="us" title="US Clear Tech Voice">🇺🇸 US Crisp</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-cta-group" style="display:flex; flex-wrap:wrap; gap:12px; margin-top:24px;">
+          <a href="#projects" class="btn btn-kisan" title="Explore CleanConnect AI &amp; Ecosystems">
+            <span>Explore Ecosystems</span>
+            <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
           </a>
-          <div class="project-header-row">
-            <h3><a href="https://ecotrackaipwd-frontend.vercel.app/" target="_blank" rel="noopener" style="color: inherit; text-decoration: none;">CleanConnect AI <span>(EcoTrack)</span></a></h3>
-            <a href="https://ecotrackaipwd-frontend.vercel.app/" target="_blank" rel="noopener" class="badge-live" style="text-decoration: none;"><span class="pulse-dot"></span> Live App ↗</a>
-          </div>
-          <p class="project-subtitle">Next-Gen AI Civic Cleanliness &amp; Municipal Waste Intelligence</p>
-          <p>Production cloud-native platform connecting citizen hazard reporting, Google Gemini Vision waste classification, and municipal field collector dispatch.</p>
-          <p class="project-link-text">🔗 <strong>Live Application:</strong> <a href="https://ecotrackaipwd-frontend.vercel.app/" target="_blank" rel="noopener">https://ecotrackaipwd-frontend.vercel.app/</a></p>
-          <ul class="project-features">
-            <li><strong>Gemini Vision Multimodal AI:</strong> Real-time waste triage (garbage dumps, plastics, hazard containers, drain blocks) with sub-3.5s latency.</li>
-            <li><strong>CV Verification Engine:</strong> Enforces strict 75%+ SSIM &amp; perceptual hash match between reported hazard and post-cleanup proof.</li>
-            <li><strong>Smart Hybrid OTP &amp; Zero-Cost:</strong> Resend API delivery over HTTPS Port 443 with sandbox auto-fill, deployed on Vercel &amp; Render ($0 USD).</li>
-          </ul>
-          <div class="tags">
-            <span>FastAPI</span>
-            <span>Python 3.11</span>
-            <span>Gemini Vision</span>
-            <span>OpenCV (SSIM)</span>
-            <span>SQLite WAL</span>
-            <span>JWT RBAC</span>
-            <span>Vercel + Render</span>
-          </div>
-          <div class="project-links">
-            <a href="https://ecotrackaipwd-frontend.vercel.app/" target="_blank" rel="noopener" class="project-btn primary-project-btn">🚀 Open CleanConnect AI ↗</a>
-            <a href="https://github.com/digitalminddilip/ecotrackaipwd" target="_blank" rel="noopener" class="project-btn">GitHub Repo ↗</a>
-            <a href="https://ecotrackaipwd-1.onrender.com/docs" target="_blank" rel="noopener" class="project-btn">API Docs ↗</a>
-          </div>
-        </article>
+          <a href="resume.html" class="btn btn-outline" title="View Printable ATS Resume">
+            <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+            <span>View Resume 📄</span>
+          </a>
+          <a href="#contact" class="btn btn-glass" title="Contact Dilip">Connect Direct ✉️</a>
+        </div>
 
-        <article class="project-card reveal">
-          <div class="project-top">
-            <span class="project-number">02</span>
-            <span class="project-tag">IoT + ENERGY INTELLIGENCE</span>
-          </div>
-          <div class="project-visual campus" style="background: #ffffff; display: flex; align-items: center; justify-content: center; padding: 16px;">
-            <img src="smartcampus.jpg" alt="Smart Campus Energy Logo" style="max-width: 100%; max-height: 100%; width: auto; height: 100%; object-fit: contain; display: block; margin: auto;">
-          </div>
-          <div class="project-header-row">
-            <h3>Smart Campus Energy</h3>
-            <span class="badge-live" style="background: rgba(103, 232, 249, 0.12); color: #67e8f9; border-color: rgba(103, 232, 249, 0.35);"><span class="pulse-dot" style="background: #67e8f9; box-shadow: 0 0 10px #67e8f9;"></span> Prototype</span>
-          </div>
-          <p class="project-subtitle">IoT Telemetry &amp; Sustainability Recommendation Architecture</p>
-          <p>Campus sustainability platform monitoring power consumption in real time with telemetry analytics, peak-load anomaly detection, and automated conservation strategies.</p>
-          <ul class="project-features">
-            <li><strong>Real-Time IoT Telemetry:</strong> Simulated sub-meter power readings and building-level consumption tracking.</li>
-            <li><strong>Intelligent Energy Alerts:</strong> Rule-based heuristic engine delivering peak reduction and anomaly alerts.</li>
-            <li><strong>Analytical Dashboard:</strong> Interactive visual trend lines, peak load forecasting, and conservation metrics.</li>
-          </ul>
-          <div class="tags">
-            <span>IoT Architecture</span>
-            <span>Python</span>
-            <span>FastAPI</span>
-            <span>Analytics</span>
-            <span>Chart.js</span>
-          </div>
-        </article>
+        <div class="hero-social-row" style="display:flex; align-items:center; gap:14px; margin-top:20px;">
+          <a href="https://github.com/digitalminddilip" target="_blank" rel="noopener" class="social-link social-github" title="GitHub - @digitalminddilip">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/" target="_blank" rel="noopener" class="social-link social-linkedin" title="LinkedIn - Dilip Kumar Sharma">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          </a>
+          <a href="https://wa.me/919555733957?text=Namaste%20Dilip!%20I%20visited%20your%20portfolio%20and%20would%20like%20to%20connect." target="_blank" rel="noopener" class="social-link social-whatsapp" title="WhatsApp - +91 9555733957">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.26-1.5-1.41-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.49-.4-.42-.56-.43h-.47c-.17 0-.44.06-.67.31-.23.25-.87.85-.87 2.07 0 1.22.89 2.4 1.01 2.57.13.17 1.75 2.68 4.25 3.75.59.26 1.06.41 1.42.52.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.07-.1-.23-.17-.48-.29z"/></svg>
+          </a>
+          <a href="mailto:digitalminddilip0906@gmail.com" class="social-link" title="Direct Email - digitalminddilip0906@gmail.com">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          </a>
+          <span class="social-separator"></span>
+          <span class="social-location">
+            <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            Gorakhpur, Uttar Pradesh
+          </span>
+        </div>
 
       </div>
-    </section>
 
-    <section id="journey" class="section journey-section">
-      <div class="section-heading reveal">
-        <p class="eyebrow">04 / JOURNEY</p>
-        <h2>Learning by <span>building.</span></h2>
-      </div>
-      <div class="timeline">
-        <div class="timeline-item reveal"><span class="timeline-dot"></span><span class="year">2025</span><div><h3>BCA + Programming Foundations</h3><p>Strengthening C/C++ fundamentals, problem solving and web basics at ITM GIDA, Gorakhpur.</p></div></div>
-        <div class="timeline-item reveal"><span class="timeline-dot"></span><span class="year">2026</span><div><h3>EcoTrack AI &amp; Production Systems</h3><p>Architecting EcoTrack AI with Gemini Vision, OpenCV SSIM verification, FastAPI microservices, and zero-cost cloud deployment.</p></div></div>
-        <div class="timeline-item reveal"><span class="timeline-dot"></span><span class="year">NEXT</span><div><h3>AI Engineering + Automation</h3><p>Building production-ready AI workflows and useful automation systems for real clients.</p></div></div>
-      </div>
-    </section>
-
-    <section id="contact" class="section contact-section">
-      <div class="contact-box reveal">
-        <p class="eyebrow">05 / CONTACT</p>
-        <h2>Have an idea?<br><span>Let's build it.</span></h2>
-        <p>I'm interested in AI projects, automation, web applications, hackathons and opportunities to learn by building.</p>
-        <div class="contact-actions">
-          <a class="btn primary" id="email-btn" href="https://mail.google.com/mail/?view=cm&fs=1&to=digitalminddilip0906@gmail.com" target="_blank" rel="noopener">Email Me ↗</a>
-          <a class="btn secondary" href="https://github.com/digitalminddilip" target="_blank" rel="noopener">GitHub ↗</a>
-          <a class="btn secondary" href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <!-- 3D Founder Portrait with Bio-Aura & Floating Chips -->
+      <div class="hero-image-wrapper">
+        <div class="profile-card-3d" id="profileCard">
+          <div class="kisan-bio-aura"></div>
+          
+          <div class="profile-border" id="profileBorder">
+            <div class="photo-slide-container">
+              <img src="profile.jpg" alt="Dilip Kumar Sharma — AI Systems Architect" class="profile-img active" id="photo1">
+            </div>
+          </div>
+          
+          <div class="photo-mode-selector">
+            <span class="mode-pill active">AI Systems Architect ⚡</span>
+            <span class="mode-pill">ITM GIDA Gorakhpur 🎓</span>
+          </div>
         </div>
       </div>
-    </section>
-  </main>
 
-  <footer class="footer">
-    <span>© 2026 Dilip Kumar Sharma</span>
+    </div>
+
+    <!-- Executive Metrics Bar -->
+    <div class="container">
+      <div class="stat-bar">
+        <div class="stat-item">
+          <div class="stat-number-wrap">
+            <span class="stat-number" data-target="100">0</span><span class="stat-plus">%</span>
+          </div>
+          <span class="stat-label">Zero-Cost Cloud Deployment ($0 USD)</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <div class="stat-number-wrap">
+            <span class="stat-number" data-target="75">0</span><span class="stat-plus">%+</span>
+          </div>
+          <span class="stat-label">SSIM Computer Vision Verification</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <div class="stat-number-wrap">
+            <span class="stat-number" data-target="3.5">0</span><span class="stat-plus">s</span>
+          </div>
+          <span class="stat-label">Sub-3.5s Gemini Vision Latency</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <div class="stat-number-wrap">
+            <span class="stat-number" data-target="15">0</span><span class="stat-plus">+</span>
+          </div>
+          <span class="stat-label">Production Microservices &amp; Endpoints</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Founder's Manifesto / Vision Section -->
+  <section class="section about-section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Vision &amp; Engineering Manifesto</span>
+        <h2 class="section-title">Empowering Bharat's Civic Spaces Through Sovereign AI Code</h2>
+        <p class="section-subtitle">Bridging grassroots citizen cleanliness reporting directly with automated municipal verification and field dispatch.</p>
+      </div>
+
+      <div class="manifesto-card glass-panel">
+        <div class="manifesto-quote-mark">"</div>
+        <blockquote class="manifesto-quote">
+          Technology reaches its highest moral and practical purpose when it directly solves grassroots community challenges. With CleanConnect AI, we engineered multimodal computer vision triage and strict SSIM proof verification — eliminating municipal delay and bringing clean accountability to civic spaces.
+        </blockquote>
+        <div class="manifesto-author">
+          <div class="author-info">
+            <strong>Dilip Kumar Sharma</strong>
+            <span>Lead Architect, CleanConnect AI (EcoTrack) · BCA Scholar, ITM GIDA Gorakhpur</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-card glass-panel">
+          <div class="about-icon-box kisan-theme">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 0 0-7.54 16.58L12 22l7.54-3.42A10 10 0 0 0 12 2z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          </div>
+          <h3>Multimodal AI Civic Intelligence</h3>
+          <p>
+            Architected CleanConnect AI (compliant with IEEE Std 830-1998) to automate municipal waste triage with Google Gemini Vision, categorizing garbage dumps, plastic hazards, and drainage blocks with sub-3.5s latency.
+          </p>
+        </div>
+
+        <div class="about-card glass-panel">
+          <div class="about-icon-box gold-theme">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg>
+          </div>
+          <h3>Asynchronous FastAPI Microservices</h3>
+          <p>
+            Engineered high-throughput REST APIs with Python 3.11, Uvicorn ASGI, SQLite 3 (WAL mode) persistence, JWT HS256 role-based access control, and Bcrypt security for zero-cost cloud reliability.
+          </p>
+        </div>
+
+        <div class="about-card glass-panel">
+          <div class="about-icon-box cyber-theme">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          </div>
+          <h3>Automated SSIM Verification Gate</h3>
+          <p>
+            Implemented OpenCV Structural Similarity Index (SSIM 75%+) and perceptual hashing (pHash) to mathematically verify that reported municipal hazards are authentically cleaned before task completion.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Ventures & Projects Section -->
+  <section class="section projects-section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Ventures &amp; Software</span>
+        <h2 class="section-title">Production Ecosystems &amp; Deployed Code</h2>
+        <p class="section-subtitle">Scalable, zero-downtime platforms engineered to solve real civic and institutional problems.</p>
+      </div>
+
+      <!-- Filter Controls -->
+      <div class="project-filters">
+        <button class="filter-btn active" data-filter="all">All Ecosystems</button>
+        <button class="filter-btn" data-filter="flagship">🌿 Flagship Civic AI</button>
+        <button class="filter-btn" data-filter="microservices">⚙️ Microservices</button>
+        <button class="filter-btn" data-filter="iot">⚡ IoT &amp; Telemetry</button>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Flagship: CleanConnect AI (EcoTrack) -->
+        <article class="project-card featured-flagship" data-category="flagship microservices">
+          <div class="flagship-badge">🌿 FLAGSHIP CIVIC-TECH PLATFORM (IEEE 830)</div>
+          <div class="project-inner">
+            <div class="project-meta">
+              <span class="project-category">Full Stack Civic Waste Intelligence &amp; Verification</span>
+              <h3 class="project-title">CleanConnect AI (EcoTrack)</h3>
+              <p class="project-desc">
+                Production cloud-native civic intelligence platform connecting citizen hazard reporting, Google Gemini Vision waste classification, and municipal field collector dispatch. Engineered under strict IEEE Std 830-1998 software requirements specification with zero-cost ($0 USD) cloud deployment across Vercel &amp; Render.
+              </p>
+
+              <div class="project-highlights">
+                <div class="highlight-item">
+                  <strong>Gemini Vision Multimodal AI:</strong> Real-time waste triage (garbage dumps, plastics, hazard containers, drain blocks) with sub-3.5s latency.
+                </div>
+                <div class="highlight-item">
+                  <strong>CV Verification Gate:</strong> Enforces strict 75%+ SSIM &amp; perceptual hash match between reported hazard and post-cleanup proof.
+                </div>
+                <div class="highlight-item">
+                  <strong>Smart Hybrid OTP &amp; Zero-Cost:</strong> Resend API delivery over HTTPS Port 443 with sandbox auto-fill, deployed on Vercel &amp; Render ($0 USD).
+                </div>
+              </div>
+
+              <div class="project-tech-stack">
+                <span class="tech-tag">Python 3.11</span>
+                <span class="tech-tag">FastAPI ASGI</span>
+                <span class="tech-tag">Gemini Vision</span>
+                <span class="tech-tag">OpenCV (SSIM 75%+)</span>
+                <span class="tech-tag">SQLite 3 WAL</span>
+                <span class="tech-tag">JWT RBAC</span>
+                <span class="tech-tag">Vercel Edge</span>
+                <span class="tech-tag">Render Cloud</span>
+              </div>
+
+              <div class="project-links">
+                <a href="https://ecotrackaipwd-frontend.vercel.app/" target="_blank" rel="noopener" class="btn btn-kisan btn-sm">
+                  <span>🚀 Open Live Platform</span>
+                  <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </a>
+                <a href="https://github.com/digitalminddilip/ecotrackaipwd" target="_blank" rel="noopener" class="btn btn-outline btn-sm">
+                  <span>Source Code</span>
+                  <svg class="icon-sm" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                </a>
+                <a href="https://ecotrackaipwd-1.onrender.com/docs" target="_blank" rel="noopener" class="btn btn-glass btn-sm">
+                  <span>⚡ API Docs</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="project-visual">
+              <div class="code-preview-window">
+                <div class="window-bar">
+                  <span class="dot red"></span>
+                  <span class="dot yellow"></span>
+                  <span class="dot green"></span>
+                  <span class="window-title">ecotrack-architecture.config.py</span>
+                </div>
+                <pre class="code-block"><code><span class="c-keyword">class</span> <span class="c-var">EcoTrackAIArchitecture</span>:
+    lead_architect = <span class="c-string">"Dilip Kumar Sharma"</span>
+    standards = <span class="c-string">"IEEE Std 830-1998 Compliant"</span>
+    stack = {
+        <span class="c-string">"multimodal_ai"</span>: <span class="c-string">"Google Gemini Vision"</span>,
+        <span class="c-string">"verification_gate"</span>: <span class="c-string">"OpenCV SSIM 75%+ Match"</span>,
+        <span class="c-string">"microservice_core"</span>: <span class="c-string">"FastAPI + SQLite WAL"</span>,
+        <span class="c-string">"zero_cost_edge"</span>: <span class="c-string">"Vercel CDN + Render Web"</span>
+    }
+    status = <span class="c-string">"PRODUCTION_ACTIVE"</span></code></pre>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Venture 2: Smart Campus Energy -->
+        <article class="project-card" data-category="iot microservices">
+          <div class="project-inner">
+            <div class="project-meta">
+              <span class="project-category">IoT Telemetry &amp; Sustainability Analytics</span>
+              <h3 class="project-title">Smart Campus Energy</h3>
+              <p class="project-desc">
+                Campus sustainability platform monitoring power consumption in real time with telemetry analytics, peak-load anomaly detection, and automated conservation strategies.
+              </p>
+
+              <div class="project-highlights">
+                <div class="highlight-item">
+                  <strong>Real-Time IoT Telemetry:</strong> Simulated sub-meter power readings and building-level consumption tracking.
+                </div>
+                <div class="highlight-item">
+                  <strong>Intelligent Energy Alerts:</strong> Rule-based heuristic engine delivering peak reduction and anomaly alerts.
+                </div>
+                <div class="highlight-item">
+                  <strong>Analytical Dashboard:</strong> Interactive visual trend lines, peak load forecasting, and conservation metrics.
+                </div>
+              </div>
+
+              <div class="project-tech-stack">
+                <span class="tech-tag">IoT Architecture</span>
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">FastAPI</span>
+                <span class="tech-tag">Chart.js</span>
+                <span class="tech-tag">Telemetry</span>
+              </div>
+
+              <div class="project-links">
+                <a href="#projects" class="btn btn-outline btn-sm">
+                  <span>🔬 Prototype Architecture</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="project-visual">
+              <div class="code-preview-window">
+                <div class="window-bar">
+                  <span class="dot red"></span>
+                  <span class="dot yellow"></span>
+                  <span class="dot green"></span>
+                  <span class="window-title">campus-telemetry.engine.py</span>
+                </div>
+                <pre class="code-block"><code><span class="c-keyword">def</span> <span class="c-var">detect_peak_anomaly</span>(submeter_readings):
+    load_threshold = <span class="c-string">"85.5% Peak Capacity"</span>
+    <span class="c-keyword">if</span> submeter_readings &gt; threshold:
+        trigger_conservation_alert()
+    <span class="c-keyword">return</span> <span class="c-string">"Optimal Grid Balance"</span></code></pre>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Venture 3: Interactive Developer Vault & ATS Resume -->
+        <article class="project-card" data-category="flagship">
+          <div class="project-inner">
+            <div class="project-meta">
+              <span class="project-category">Personal Executive Space &amp; ATS Resume Vault</span>
+              <h3 class="project-title">Developer Space &amp; ATS Resume Engine</h3>
+              <p class="project-desc">
+                Executive portfolio ecosystem engineered with dark glassmorphism, responsive grid background, ambient glow, Canvas bio-flame cursor engine, and a 1-click printable ATS-friendly resume engine.
+              </p>
+
+              <div class="project-tech-stack">
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">CSS3 Glassmorphism</span>
+                <span class="tech-tag">ES6+ JavaScript</span>
+                <span class="tech-tag">Canvas Flame Engine</span>
+                <span class="tech-tag">Matrix Rain</span>
+              </div>
+
+              <div class="project-links">
+                <a href="resume.html" class="btn btn-kisan btn-sm">
+                  <span>📄 View Resume</span>
+                </a>
+                <a href="https://github.com/digitalminddilip/portfolio" target="_blank" rel="noopener" class="btn btn-outline btn-sm">
+                  <span>Repository</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="project-visual">
+              <div class="code-preview-window">
+                <div class="window-bar">
+                  <span class="dot red"></span>
+                  <span class="dot yellow"></span>
+                  <span class="dot green"></span>
+                  <span class="window-title">resume-engine.config.js</span>
+                </div>
+                <pre class="code-block"><code><span class="c-keyword">export const</span> <span class="c-var">ATSResumeEngine</span> = {
+    candidate: <span class="c-string">"Dilip Kumar Sharma"</span>,
+    role: <span class="c-string">"AI Systems Architect"</span>,
+    printEngine: <span class="c-string">"1-Click Vector PDF"</span>,
+    atsCompliant: <span class="c-string">"100% Score"</span>
+};</code></pre>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section with Neon Category Deck & Binary Matrix Canvas -->
+  <section class="section skills-section" id="skills">
+    <!-- Cyber Coding Matrix & Binary Bits Canvas (0, 1 Moving Streams) -->
+    <canvas id="skillsBinaryCanvas" class="skills-binary-canvas"></canvas>
+
+    <div class="container">
+      
+      <!-- Neon Section Title Header -->
+      <div class="skills-neon-main-header">
+        <h2 class="skills-neon-title">Skills &amp; Technology Stack</h2>
+        <div class="skills-neon-header-line"></div>
+      </div>
+
+      <!-- Cyber Neon Interactive Category Selector Tabs -->
+      <div class="skills-tab-nav" role="tablist" aria-label="Skills Category Navigation">
+        <button class="skill-tab-btn tab-cyan active" data-target="cat-programming" role="tab" aria-selected="true" id="tab-btn-programming">
+          <span class="tab-icon">&lt;&gt;</span>
+          <span class="tab-label">Programming Languages</span>
+          <span class="tab-count">6</span>
+        </button>
+
+        <button class="skill-tab-btn tab-green" data-target="cat-backend" role="tab" aria-selected="false" id="tab-btn-backend">
+          <span class="tab-icon">⚙️</span>
+          <span class="tab-label">Backend &amp; Databases</span>
+          <span class="tab-count">6</span>
+        </button>
+
+        <button class="skill-tab-btn tab-pink" data-target="cat-ai" role="tab" aria-selected="false" id="tab-btn-ai">
+          <span class="tab-icon">🤖</span>
+          <span class="tab-label">AI &amp; Computer Vision</span>
+          <span class="tab-count">5</span>
+        </button>
+
+        <button class="skill-tab-btn tab-purple" data-target="cat-cloud" role="tab" aria-selected="false" id="tab-btn-cloud">
+          <span class="tab-icon">☁️</span>
+          <span class="tab-label">Cloud &amp; DevOps</span>
+          <span class="tab-count">6</span>
+        </button>
+
+        <button class="skill-tab-btn tab-all" data-target="all" role="tab" aria-selected="false" id="tab-btn-all">
+          <span class="tab-icon">★</span>
+          <span class="tab-label">Show All</span>
+        </button>
+      </div>
+
+      <!-- Skills Neon Cards Showcase Deck -->
+      <div class="skills-neon-deck" id="skillsDeck">
+
+        <!-- CARD 1: Programming Languages -->
+        <div class="neon-skill-card theme-cyan active" id="cat-programming" data-category="cat-programming">
+          <div class="neon-card-header">
+            <div class="neon-header-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+              </svg>
+            </div>
+            <h3 class="neon-card-title">Programming Languages</h3>
+          </div>
+          
+          <div class="neon-card-divider"></div>
+
+          <div class="neon-skills-items">
+            <!-- Python -->
+            <div class="neon-skill-item" title="Python 3.11+">
+              <div class="skill-item-icon">
+                <svg viewBox="0 0 24 24" width="40" height="40" fill="#3776AB"><path d="M11.914 0C5.82 0 6.2 2.656 6.2 2.656l.006 2.75h5.813v.825H3.9S0 5.77 0 11.914c0 6.14 3.4 5.925 3.4 5.925h2.025v-2.844s-.11-3.4 3.344-3.4h5.738s3.237.053 3.237-3.14V3.14S18.23 0 11.914 0zm-3.23 1.834a1.085 1.085 0 1 1 0 2.17 1.085 1.085 0 0 1 0-2.17zM12.086 24c6.094 0 5.714-2.656 5.714-2.656l-.006-2.75H11.98v-.825h8.12s3.9.46 3.9-5.684c0-6.14-3.4-5.925-3.4-5.925h-2.025v2.844s.11 3.4-3.344 3.4H9.488s-3.237-.053-3.237 3.14v5.305s-.49 3.14 5.835 3.14zm3.23-1.834a1.085 1.085 0 1 1 0-2.17 1.085 1.085 0 0 1 0 2.17z"/></svg>
+              </div>
+              <span class="skill-item-name">Python 3.11+</span>
+            </div>
+
+            <!-- JavaScript -->
+            <div class="neon-skill-item" title="Modern JavaScript ES6+">
+              <div class="skill-item-icon">
+                <svg viewBox="0 0 24 24" width="40" height="40" fill="#F7DF1E"><path d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.017-.834-1.779-2.26-2.336-.741-.29-1.409-.578-1.409-1.077 0-.417.319-.714.869-.714.53 0 .869.215 1.139.697.589-.374.589-.374.966-.621-.497-.733-1.223-1.096-2.108-1.096-1.503 0-2.473.918-2.473 2.181 0 1.341.878 1.947 2.215 2.473.844.332 1.258.627 1.258 1.162 0 .524-.467.878-1.199.878-.857 0-1.341-.442-1.637-1.037-.589.344-.589.344-.99.589.442.885 1.317 1.487 2.628 1.487 1.838 0 2.827-.929 2.827-2.392l-.001-.013zm-8.878 1.884c.344-.589.344-.589.929-.942-.442-.714-.714-1.317-.714-2.285V11.23h1.706V8.924H9.791v8.005c0 1.554.764 2.467 2.365 2.231v1.001z"/></svg>
+              </div>
+              <span class="skill-item-name">JavaScript ES6+</span>
+            </div>
+
+            <!-- C -->
+            <div class="neon-skill-item" title="C Language">
+              <div class="skill-item-icon">
+                <svg viewBox="0 0 48 48" width="40" height="40">
+                  <circle cx="24" cy="24" r="20" fill="none" stroke="#007ACC" stroke-width="4.5"/>
+                  <path fill="#007ACC" d="M31 16a11 11 0 1 0 0 16l-3.2-4.2a5.5 5.5 0 1 1 0-7.6L31 16z"/>
+                </svg>
+              </div>
+              <span class="skill-item-name">C</span>
+            </div>
+
+            <!-- C++ -->
+            <div class="neon-skill-item" title="C++">
+              <div class="skill-item-icon">
+                <svg viewBox="0 0 48 48" width="40" height="40">
+                  <path fill="#007ACC" d="M22 13a11 11 0 1 0 0 22l-2.8-3.8a6.5 6.5 0 1 1 0-14.4L22 13z"/>
+                  <path fill="#0098FF" d="M26 21h2v2h2v2h-2v2h-2v-2h-2v-2h2v-2zm8 0h2v2h2v2h-2v2h-2v-2h-2v-2h2v-2z"/>
+                </svg>
+              </div>
+              <span class="skill-item-name">C++</span>
+            </div>
+
+            <!-- HTML5 -->
+            <div class="neon-skill-item" title="HTML5 Semantic Markup">
+              <div class="skill-item-icon">
+                <svg viewBox="0 0 24 24" width="40" height="40" fill="#E34F26"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059-.003.23-2.622L5.419 4.407l.71 8.019h9.117l-.367 4.143-3.19.863-3.197-.863-.205-2.317H5.66l.397 4.54 5.92 1.603 5.918-1.603.805-9.419H8.531z"/></svg>
+              </div>
+              <span class="skill-item-name">HTML5</span>
+            </div>
+
+            <!-- CSS3 -->
+            <div class="neon-skill-item" title="CSS3 Glassmorphism">
+              <div class="skill-item-icon">
+                <svg viewBox="0 0 24 24" width="40" height="40" fill="#1572B6"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm15.42 6.094l.235-2.687H6.845l.705 7.973h8.318l-.348 3.93-3.543.957-3.544-.957-.228-2.585H5.805l.448 5.12 5.724 1.55 5.723-1.55.787-8.918H9.728l-.234-2.687h7.426l-.001-.146z"/></svg>
+              </div>
+              <span class="skill-item-name">CSS3 Glassmorphism</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 2: Backend & Databases -->
+        <div class="neon-skill-card theme-green" id="cat-backend" data-category="cat-backend">
+          <div class="neon-card-header">
+            <div class="neon-header-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+              </svg>
+            </div>
+            <h3 class="neon-card-title">Backend Services &amp; Databases</h3>
+          </div>
+          
+          <div class="neon-card-divider"></div>
+
+          <div class="neon-skills-items">
+            <!-- FastAPI -->
+            <div class="neon-skill-item" title="FastAPI Asynchronous Microservices">
+              <div class="skill-item-icon">
+                <svg viewBox="0 0 24 24" width="40" height="40" fill="#009688"><path d="M12 0C5.372 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+              </div>
+              <span class="skill-item-name">FastAPI ASGI</span>
+            </div>
+
+            <!-- REST APIs -->
+            <div class="neon-skill-item" title="RESTful Architecture">
+              <div class="skill-item-icon">
+                <svg viewBox="0 0 24 24" width="40" height="40" fill="#005571"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14h2v2h-2zm0-10h2v8h-2z"/></svg>
+              </div>
+              <span class="skill-item-name">RESTful APIs</span>
+            </div>
+
+            <!-- SQLite WAL -->
+            <div class="neon-skill-item" title="SQLite 3 WAL Mode">
+              <div class="skill-item-icon">
+                <svg viewBox="0 0 24 24" width="40" height="40" fill="#003B57"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+              </div>
+              <span class="skill-item-name">SQLite 3 (WAL)</span>
+            </div>
+
+            <!-- JWT Auth -->
+            <div class="neon-skill-item" title="JWT RBAC Authentication">
+              <div class="skill-item-icon">
+                <svg viewBox="0 0 24 24" width="40" height="40" fill="#d63aff"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg>
+              </div>
+              <span class="skill-item-name">JWT RBAC Auth</span>
+            </div>
+
+            <!-- Uvicorn -->
+            <div class="neon-skill-item" title="Uvicorn ASGI Server">
+              <div class="skill-item-icon">
+                <svg viewBox="0 0 24 24" width="40" height="40" fill="#4051B5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              </div>
+              <span class="skill-item-name">Uvicorn ASGI</span>
+            </div>
+
+            <!-- Node.js -->
+            <div class="neon-skill-item" title="Node.js">
+              <div class="skill-item-icon">
+                <svg viewBox="0 0 24 24" width="40" height="40" fill="#339933"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 15h-2v-6h2zm0-8h-2V7h2z"/></svg>
+              </div>
+              <span class="skill-item-name">Node.js</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 3: AI & Computer Vision -->
+        <div class="neon-skill-card theme-pink" id="cat-ai" data-category="cat-ai">
+          <div class="neon-card-header">
+            <div class="neon-header-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <circle cx="12" cy="12" r="3"></circle>
+                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+              </svg>
+            </div>
+            <h3 class="neon-card-title">AI &amp; Computer Vision</h3>
+          </div>
+          
+          <div class="neon-card-divider"></div>
+
+          <div class="neon-skills-items">
+            <!-- Google Gemini Vision -->
+            <div class="neon-skill-item" title="Google Gemini Vision Multimodal AI">
+              <div class="skill-item-icon">
+                <svg viewBox="0 0 24 24" width="40" height="40" fill="#8E75B2"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 15h-2v-6h2zm0-8h-2V7h2z"/></svg>
+              </div>
+              <span class="skill-item-name">Gemini Vision AI</span>
+            </div>
+
+            <!-- OpenCV SSIM -->
+            <div class="neon-skill-item" title="OpenCV Structural Similarity Index (SSIM)">
+              <div class="skill-item-icon">
+                <svg viewBox="0 0 24 24" width="40" height="40" fill="#5C3EE8"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+              </div>
+              <span class="skill-item-name">OpenCV (SSIM 75%+)</span>
+            </div>
+
+            <!-- Perceptual Hashing -->
+            <div class="neon-skill-item" title="Perceptual Hashing (pHash)">
+              <div class="skill-item-icon">
+                <svg viewBox="0 0 24 24" width="40" height="40" fill="#FF007F"><path d="M4 4h4v4H4zm6 0h4v4h-4zm6 0h4v4h-4zM4 10h4v4H4zm6 0h4v4h-4zm6 0h4v4h-4zM4 16h4v4H4zm6 0h4v4h-4zm6 0h4v4h-4z"/></svg>
+              </div>
+              <span class="skill-item-name">Perceptual Hashing</span>
+            </div>
+
+            <!-- Resend API -->
+            <div class="neon-skill-item" title="Resend Port 443 HTTPS Mailing">
+              <div class="skill-item-icon">
+                <svg viewBox="0 0 24 24" width="40" height="40" fill="#FFFFFF"><path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6zm-2 0l-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z"/></svg>
+              </div>
+              <span class="skill-item-name">Resend API</span>
+            </div>
+
+            <!-- Workflow Automation -->
+            <div class="neon-skill-item" title="Event-Driven Automation Pipelines">
+              <div class="skill-item-icon">
+                <svg viewBox="0 0 24 24" width="40" height="40" fill="#FF6B6B"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              </div>
+              <span class="skill-item-name">Workflow Automation</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 4: Cloud & DevOps -->
+        <div class="neon-skill-card theme-purple" id="cat-cloud" data-category="cat-cloud">
+          <div class="neon-card-header">
+            <div class="neon-header-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
+              </svg>
+            </div>
+            <h3 class="neon-card-title">Cloud Infrastructure &amp; DevOps</h3>
+          </div>
+          
+          <div class="neon-card-divider"></div>
+
+          <div class="neon-skills-items">
+            <!-- Vercel -->
+            <div class="neon-skill-item" title="Vercel Edge CDN">
+              <div class="skill-item-icon">
+                <svg viewBox="0 0 24 24" width="40" height="40" fill="#FFFFFF"><path d="M24 22.525H0l12-21.05 12 21.05z"/></svg>
+              </div>
+              <span class="skill-item-name">Vercel Edge</span>
+            </div>
+
+            <!-- Render -->
+            <div class="neon-skill-item" title="Render Cloud Microservices">
+              <div class="skill-item-icon">
+                <svg viewBox="0 0 24 24" width="40" height="40" fill="#46E3B7"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 15h-2v-6h2zm0-8h-2V7h2z"/></svg>
+              </div>
+              <span class="skill-item-name">Render Cloud</span>
+            </div>
+
+            <!-- Git -->
+            <div class="neon-skill-item" title="Git Version Control">
+              <div class="skill-item-icon">
+                <svg viewBox="0 0 24 24" width="40" height="40" fill="#F05032"><path d="M23.546 10.93L13.067.452a1.5 1.5 0 0 0-2.126 0L8.808 2.584l2.678 2.678a1.5 1.5 0 0 1 1.895 1.907l2.624 2.624a1.5 1.5 0 0 1 1.942 1.941l3.599 3.599a1.5 1.5 0 0 0 2-2.396z"/></svg>
+              </div>
+              <span class="skill-item-name">Git</span>
+            </div>
+
+            <!-- GitHub -->
+            <div class="neon-skill-item" title="GitHub &amp; CI/CD Actions">
+              <div class="skill-item-icon">
+                <svg viewBox="0 0 24 24" width="40" height="40" fill="#FFFFFF"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              </div>
+              <span class="skill-item-name">GitHub Actions</span>
+            </div>
+
+            <!-- Linux -->
+            <div class="neon-skill-item" title="Linux (x86_64 / s390x)">
+              <div class="skill-item-icon">
+                <svg viewBox="0 0 24 24" width="40" height="40" fill="#FCC624"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 15h-2v-6h2zm0-8h-2V7h2z"/></svg>
+              </div>
+              <span class="skill-item-name">Linux (x86/s390x)</span>
+            </div>
+
+            <!-- Postman -->
+            <div class="neon-skill-item" title="Postman API Testing">
+              <div class="skill-item-icon">
+                <svg viewBox="0 0 24 24" width="40" height="40" fill="#FF6C37"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 15h-2v-6h2zm0-8h-2V7h2z"/></svg>
+              </div>
+              <span class="skill-item-name">Postman</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Journey & Milestones Section -->
+  <section class="section leadership-section" id="journey">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Academic &amp; Systems Trajectory</span>
+        <h2 class="section-title">Milestones &amp; Learning by Building</h2>
+        <p class="section-subtitle">From programming foundations to architecting zero-cost cloud production AI systems.</p>
+      </div>
+
+      <div class="leadership-grid" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:24px;">
+        <div class="leadership-card glass-panel" style="padding:26px; border-radius:18px;">
+          <div class="role-badge" style="font-family:var(--font-mono); font-size:0.8rem; color:var(--kisan-cyber); margin-bottom:8px;">2024 – 2027 · PRESENT</div>
+          <h3 style="font-size:1.3rem; margin-bottom:6px;">BCA Scholar @ ITM GIDA, Gorakhpur</h3>
+          <p style="color:var(--kisan-gold); font-size:0.92rem; font-weight:600; margin-bottom:10px;">Institute of Technology &amp; Management (ITM), GIDA Gorakhpur</p>
+          <p style="color:var(--text-muted); font-size:0.92rem;">
+            Strengthening core computer science fundamentals, C/C++ architecture, algorithms, database systems, and web application development while leading autonomous software initiatives.
+          </p>
+        </div>
+
+        <div class="leadership-card glass-panel" style="padding:26px; border-radius:18px;">
+          <div class="role-badge" style="font-family:var(--font-mono); font-size:0.8rem; color:var(--kisan-emerald); margin-bottom:8px;">2026 · ARCHITECTURAL BREAKTHROUGH</div>
+          <h3 style="font-size:1.3rem; margin-bottom:6px;">CleanConnect AI (EcoTrack) Launch</h3>
+          <p style="color:var(--kisan-emerald); font-size:0.92rem; font-weight:600; margin-bottom:10px;">IEEE Std 830-1998 Compliant Production Platform</p>
+          <p style="color:var(--text-muted); font-size:0.92rem;">
+            Architected and deployed a complete cloud-native civic intelligence system featuring Google Gemini Vision, an OpenCV SSIM 75%+ gate, and zero-cost ($0 USD) cloud infrastructure across Vercel &amp; Render.
+          </p>
+        </div>
+
+        <div class="leadership-card glass-panel" style="padding:26px; border-radius:18px;">
+          <div class="role-badge" style="font-family:var(--font-mono); font-size:0.8rem; color:var(--kisan-wheat); margin-bottom:8px;">NEXT HORIZON</div>
+          <h3 style="font-size:1.3rem; margin-bottom:6px;">Autonomous AI Engineering &amp; Automation</h3>
+          <p style="color:var(--kisan-wheat); font-size:0.92rem; font-weight:600; margin-bottom:10px;">Production AI Systems &amp; Agency Scaling</p>
+          <p style="color:var(--text-muted); font-size:0.92rem;">
+            Building specialized multimodal computer vision workflows, autonomous business agent pipelines, and intelligent API automations that solve high-value operational challenges.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Verified Credentials Section -->
+  <section class="section achievements-section" id="credentials">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Verified Credentials</span>
+        <h2 class="section-title">Academic &amp; Technical Honors</h2>
+        <p class="section-subtitle">Verified diplomas, certifications, and compliance benchmarks.</p>
+      </div>
+
+      <div class="credentials-vault-grid" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:24px;">
+        <div class="cert-card glass-panel" style="padding:26px; border-radius:18px;">
+          <div style="font-size:2rem; margin-bottom:12px;">📜</div>
+          <div style="font-family:var(--font-mono); font-size:0.8rem; color:var(--kisan-emerald); margin-bottom:8px;">DISTINCTION · 2024</div>
+          <h3 style="font-size:1.25rem; margin-bottom:8px;">ADCA (Advance Diploma in Computer Applications)</h3>
+          <p style="color:var(--text-muted); font-size:0.92rem; margin-bottom:14px;">MDCIT — Comprehensive certification in computer application architectures, database foundations, and systems programming.</p>
+          <span style="font-family:var(--font-mono); font-size:0.82rem; color:var(--kisan-emerald); font-weight:600;">✓ Verified Credential</span>
+        </div>
+
+        <div class="cert-card glass-panel" style="padding:26px; border-radius:18px;">
+          <div style="font-size:2rem; margin-bottom:12px;">🎓</div>
+          <div style="font-family:var(--font-mono); font-size:0.8rem; color:var(--kisan-gold); margin-bottom:8px;">CERTIFIED · 2023</div>
+          <h3 style="font-size:1.25rem; margin-bottom:8px;">Basic Computer Certification</h3>
+          <p style="color:var(--text-muted); font-size:0.92rem; margin-bottom:14px;">NIIT Foundation — Core foundational training in modern computing environments, office intelligence, and digital workflows.</p>
+          <span style="font-family:var(--font-mono); font-size:0.82rem; color:var(--kisan-gold); font-weight:600;">✓ Verified Credential</span>
+        </div>
+
+        <div class="cert-card glass-panel" style="padding:26px; border-radius:18px;">
+          <div style="font-size:2rem; margin-bottom:12px;">🛡️</div>
+          <div style="font-family:var(--font-mono); font-size:0.8rem; color:var(--kisan-cyber); margin-bottom:8px;">SOFTWARE ENGINEERING COMPLIANCE</div>
+          <h3 style="font-size:1.25rem; margin-bottom:8px;">IEEE Std 830-1998 SRS Specification</h3>
+          <p style="color:var(--text-muted); font-size:0.92rem; margin-bottom:14px;">CleanConnect AI (EcoTrack) engineered in strict compliance with IEEE Software Requirements Specification standards.</p>
+          <span style="font-family:var(--font-mono); font-size:0.82rem; color:var(--kisan-cyber); font-weight:600;">✓ Verified Specification</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Executive Transmission Section -->
+  <section class="section contact-section" id="contact">
+    <div class="container">
+      <div class="contact-card glass-panel">
+        
+        <div class="contact-info">
+          <span class="section-tag">Executive Inquiries</span>
+          <h2 class="contact-title">Let's Pioneer the Future of AI &amp; Civic Technology</h2>
+          <p class="contact-text">
+            Open to strategic venture partnerships, institutional collaborations, hackathons, and high-impact AI software engineering opportunities. Connect directly through the channels below.
+          </p>
+
+          <div class="contact-details">
+            <a href="mailto:digitalminddilip0906@gmail.com" class="contact-item">
+              <div class="contact-icon">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              </div>
+              <div>
+                <span class="contact-label">Official Email</span>
+                <span class="contact-val">digitalminddilip0906@gmail.com</span>
+              </div>
+            </a>
+
+            <a href="tel:+919555733957" class="contact-item">
+              <div class="contact-icon">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              </div>
+              <div>
+                <span class="contact-label">Direct Line</span>
+                <span class="contact-val">+91 9555733957</span>
+              </div>
+            </a>
+
+            <a href="https://wa.me/919555733957?text=Namaste%20Dilip!%20I%20visited%20your%20portfolio%20and%20would%20like%20to%20connect." target="_blank" rel="noopener" class="contact-item">
+              <div class="contact-icon" style="background: rgba(37, 211, 102, 0.15); border-color: rgba(37, 211, 102, 0.4); color: #25D366;">
+                <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.26-1.5-1.41-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.49-.4-.42-.56-.43h-.47c-.17 0-.44.06-.67.31-.23.25-.87.85-.87 2.07 0 1.22.89 2.4 1.01 2.57.13.17 1.75 2.68 4.25 3.75.59.26 1.06.41 1.42.52.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.07-.1-.23-.17-.48-.29z"/></svg>
+              </div>
+              <div>
+                <span class="contact-label">WhatsApp Direct</span>
+                <span class="contact-val">+91 9555733957 (Chat Now)</span>
+              </div>
+            </a>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              </div>
+              <div>
+                <span class="contact-label">Headquarters Base</span>
+                <span class="contact-val">Gorakhpur, Uttar Pradesh, India</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-action-buttons">
+            <a href="resume.html" class="btn btn-kisan">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              <span>View &amp; Print ATS Resume (PDF)</span>
+            </a>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contactForm">
+          <h3 class="form-title">Direct Executive Message</h3>
+          
+          <div class="form-group">
+            <label for="senderName">Your Name / Organization</label>
+            <input type="text" id="senderName" required placeholder="e.g. Rahul Sharma (Engineering Lead)">
+          </div>
+
+          <div class="form-group">
+            <label for="senderEmail">Your Email</label>
+            <input type="email" id="senderEmail" required placeholder="contact@organization.com">
+          </div>
+
+          <div class="form-group">
+            <label for="senderSubject">Inquiry Nature</label>
+            <input type="text" id="senderSubject" required placeholder="AI Project / Hackathon / Collaboration">
+          </div>
+
+          <div class="form-group">
+            <label for="senderMessage">Message</label>
+            <textarea id="senderMessage" rows="4" required placeholder="Detail your proposition or requirement..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-kisan btn-block">
+            <span>Transmit Message</span>
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+          </button>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Modern Executive Footer -->
+  <footer class="footer" id="footer">
+    <div class="container footer-container">
+      <div class="footer-grid">
+        
+        <!-- Column 1: Brand & Identity -->
+        <div class="footer-col footer-col-brand">
+          <a href="#hero" class="nav-brand footer-brand">
+            <div class="brand-meta">
+              <span class="brand-name">&lt;Dilip Kumar Sharma/&gt;</span>
+              <span class="brand-sub">AI Systems Architect &amp; CivicTech Pioneer</span>
+            </div>
+          </a>
+          <p class="footer-tagline">
+            Architecting technological sovereignty, computer vision verification pipelines, and zero-cost cloud microservices across civic and institutional ecosystems.
+          </p>
+          <div class="footer-status-badge">
+            <span class="status-pulse-dot"></span>
+            <span>Open for AI Engineering &amp; Hackathon Collaborations</span>
+          </div>
+        </div>
+
+        <!-- Column 2: Flagship Ventures -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Flagship Ecosystems</h4>
+          <ul class="footer-links-list">
+            <li><a href="https://ecotrackaipwd-frontend.vercel.app/" target="_blank" rel="noopener">🌿 CleanConnect AI (EcoTrack)</a></li>
+            <li><a href="https://github.com/digitalminddilip/ecotrackaipwd" target="_blank" rel="noopener">🐙 EcoTrack AI Repository</a></li>
+            <li><a href="https://ecotrackaipwd-1.onrender.com/docs" target="_blank" rel="noopener">⚡ Interactive API Swagger Docs</a></li>
+            <li><a href="#projects">⚡ Smart Campus Energy</a></li>
+            <li><a href="resume.html">📄 ATS-Friendly Resume Vault</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Quick Navigation -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Portfolio Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="#hero">Architect Home</a></li>
+            <li><a href="#about">Engineering Vision</a></li>
+            <li><a href="#projects">Ecosystems &amp; Stack</a></li>
+            <li><a href="#skills">Neon Skills Deck</a></li>
+            <li><a href="#journey">Academic Milestones</a></li>
+            <li><a href="#contact">Direct Transmission</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Base & Direct Connect -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Headquarters &amp; Direct</h4>
+          <div class="footer-contact-items">
+            <p class="footer-info-item">
+              <span class="info-icon">📍</span>
+              <span>Gorakhpur, Uttar Pradesh, India</span>
+            </p>
+            <p class="footer-info-item">
+              <span class="info-icon">📞</span>
+              <a href="tel:+919555733957">+91 9555733957</a>
+            </p>
+            <p class="footer-info-item">
+              <span class="info-icon">💬</span>
+              <a href="https://wa.me/919555733957?text=Namaste%20Dilip!%20I%20visited%20your%20portfolio." target="_blank" rel="noopener">WhatsApp: +91 9555733957</a>
+            </p>
+            <p class="footer-info-item">
+              <span class="info-icon">✉️</span>
+              <a href="mailto:digitalminddilip0906@gmail.com">digitalminddilip0906@gmail.com</a>
+            </p>
+          </div>
+          <div class="footer-social-row">
+            <a href="https://github.com/digitalminddilip" target="_blank" rel="noopener" class="footer-social-btn social-github" title="GitHub - @digitalminddilip">
+              <svg class="icon-sm" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener" class="footer-social-btn social-linkedin" title="LinkedIn - Dilip Kumar Sharma">
+              <svg class="icon-sm" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+            <a href="https://wa.me/919555733957?text=Namaste%20Dilip!%20I%20visited%20your%20portfolio." target="_blank" rel="noopener" class="footer-social-btn social-whatsapp" title="WhatsApp - Chat with Dilip (+91 9555733957)">
+              <svg class="icon-sm" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.26-1.5-1.41-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.49-.4-.42-.56-.43h-.47c-.17 0-.44.06-.67.31-.23.25-.87.85-.87 2.07 0 1.22.89 2.4 1.01 2.57.13.17 1.75 2.68 4.25 3.75.59.26 1.06.41 1.42.52.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.07-.1-.23-.17-.48-.29z"/></svg>
+            </a>
+            <a href="resume.html" class="footer-social-btn" title="Official Resume PDF">
+              <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom-bar">
+        <p class="copyright-text">© 2026 <strong>Dilip Kumar Sharma</strong> · Lead Architect — CleanConnect AI · All Rights Reserved.</p>
+        <button class="back-to-top-btn" id="backToTopBtn" aria-label="Back to Top">
+          <span>Top</span>
+          <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"></polyline></svg>
+        </button>
+      </div>
+    </div>
   </footer>
+
+  <!-- Toast Notification System -->
+  <div class="toast" id="toast"></div>
 
   <script src="script.js"></script>
 </body>
