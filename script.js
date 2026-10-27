@@ -672,9 +672,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // 13. EXECUTIVE CONTACT FORM (High-Speed Background Transmission)
   // =======================================================
   const contactForm = document.getElementById('contactForm');
-  // Optional: Place your Web3Forms free Access Key here for instant < 400ms transmission
-  // Get your free key in 10s at https://web3forms.com (No credit card / sign up needed)
-  let WEB3FORMS_ACCESS_KEY = contactForm?.getAttribute('data-web3-key') || '';
+  // Official Web3Forms Access Key for digitalminddilip0906@gmail.com
+  const WEB3FORMS_ACCESS_KEY = "5c899fb5-4d0e-4d91-9d00-20d150025877";
 
   if (contactForm) {
     contactForm.addEventListener('submit', async (e) => {
