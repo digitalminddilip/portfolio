@@ -669,23 +669,80 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   // =======================================================
-  // 13. EXECUTIVE CONTACT FORM
+  // 13. EXECUTIVE CONTACT FORM (Direct Background Transmission)
   // =======================================================
   const contactForm = document.getElementById('contactForm');
   if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
+    contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
+
+      const submitBtn = contactForm.querySelector('button[type="submit"]');
+      const originalBtnHTML = submitBtn ? submitBtn.innerHTML : '';
 
       const name = document.getElementById('senderName')?.value || 'Guest';
       const email = document.getElementById('senderEmail')?.value || '';
       const subject = document.getElementById('senderSubject')?.value || 'Collaboration Inquiry';
       const message = document.getElementById('senderMessage')?.value || '';
 
-      const mailtoUrl = `mailto:digitalminddilip0906@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Executive Transmission to Dilip Kumar Sharma:\n\nSender: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
+      // Set button to loading state
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = `
+          <span>Transmitting Message...</span>
+          <svg class="icon-sm spin-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="animation: spinIcon 1s linear infinite;">
+            <circle cx="12" cy="12" r="10" stroke-opacity="0.25"></circle>
+            <path d="M12 2a10 10 0 0 1 10 10" stroke="currentColor"></path>
+          </svg>
+        `;
+      }
 
-      window.open(mailtoUrl, '_blank');
-      showToast(`Opening transmission to digitalminddilip0906@gmail.com...`);
-      contactForm.reset();
+      try {
+        const response = await fetch("https://formsubmit.co/ajax/digitalminddilip0906@gmail.com", {
+          method: "POST",
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify({
+            name: name,
+            email: email,
+            subject: subject,
+            message: message,
+            _subject: `⚡ New Portfolio Message from ${name} [${subject}]`,
+            _template: "table",
+            _captcha: "false"
+          })
+        });
+
+        const result = await response.json();
+
+        if (response.ok && (result.success === "true" || result.success === true || response.status === 200)) {
+          showToast(`✅ Transmission received! Message sent directly to Dilip's inbox.`);
+          if (submitBtn) {
+            submitBtn.innerHTML = `<span>Transmitted Successfully! ✓</span>`;
+            submitBtn.style.background = 'linear-gradient(135deg, #10b981, #059669)';
+          }
+          contactForm.reset();
+          setTimeout(() => {
+            if (submitBtn) {
+              submitBtn.disabled = false;
+              submitBtn.innerHTML = originalBtnHTML;
+              submitBtn.style.background = '';
+            }
+          }, 4500);
+        } else {
+          throw new Error(result.message || 'Transmission failed');
+        }
+      } catch (err) {
+        console.warn('Direct transmission fallback to mailto:', err);
+        const mailtoUrl = `mailto:digitalminddilip0906@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Executive Transmission to Dilip Kumar Sharma:\n\nSender: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
+        window.open(mailtoUrl, '_blank');
+        showToast(`Opening email client to digitalminddilip0906@gmail.com...`);
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalBtnHTML;
+        }
+      }
     });
   }
 
